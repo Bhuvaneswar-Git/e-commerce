@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>D-Clothes</title>
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"
+    />
+
+    <!-- css -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- font awesome icon -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"/>
+  </head>
+
+  <body>
+
+    <!-- navbar -->
+     <nav class="navbar">
+        <h1>D-Clothes</h1>
+        <div class="navbar-links">
+            <p class="navbar-link" ><a href="index.html">Home</a></p>
+            <p class="navbar-link"><a href="collection.html">Collections</a></p>
+            <p class="navbar-link"><a href="contact.html">Contact</a></p>
+        </div>
+        <div class="navbar-menu-toggle" onclick="shownav()" >
+            <i class="fa-solid fa-bars" ></i>
+        </div>
+     </nav>
+
+     <!-- side navbar -->
+      <div class="side-navbar">
+        <p style="text-align: right;" ><i class="fa-solid fa-xmark" onclick="closenav()" ></i></p>
+        <div class="side-navbar-links"></div>
+            <p class="side-navbar-link" ><a href="index.html">Home</a></p>
+            <p class="side-navbar-link"><a href="collection.html">Collections</a></p>
+            <p class="side-navbar-link"><a href="contact.html">Contact</a></p>
+        </div>
+      </div>
+
+      <!-- product -->
+      <div class="product-section">
+
+        <form class="product-search " >
+            <input type="text" id="search" placeholder="Search" >
+            <i class="fa-solid fa-magnifying-glass" ></i>
+        </form>
+
+        <div class="products" id="products">
+
+            <div class="product-box">
+                <img src="image/white-shirt.jpeg" alt="image">
+                <p>White Shirt</p>
+            </div>
+
+            <div class="product-box">
+                <img src="image/black-shirt.jpeg" alt="image">
+                <p>Black Shirt</p>
+            </div>
+
+            <div class="product-box">
+                <img src="image/grey-pant.jpeg" alt="image">
+                <p>White Pant</p>
+            </div>
+
+            <div class="product-box">
+                <img src="image/black-pant.jpeg" alt="image">
+                <p>Black Pant</p>
+            </div>
+
+            <div class="product-box">
+                <img src="image/outfit-1.jpeg" alt="image">
+                <p>Office Outfit Men</p>
+            </div>
+
+            <div class="product-box">
+                <img src="image/outfit-3.jpeg" alt="image">
+                <p>Office Outfit Women</p>
+            </div>
+
+            <div class="product-box">
+                <img src="image/outfit-2.jpeg" alt="image">
+                <p>Office Outfit Men</p>
+            </div>
+
+            <div class="product-box">
+                <img src="image/outfit-4.jpeg" alt="image">
+                <p>Office Outfit women</p>
+            </div>
+
+        </div>
+      </div>
+
+          <!-- footer -->
+           <div class="footer">
+            <div class="footer-container">
+                <div class="footer-box-1">
+                    <h2>D-Clothes</h2>
+                    <p>Curated style, delivered to your doorstep: Our brand’s e-commerce D-Clothes.</p>
+                    <div class="footer-icon-container">
+                        <i class="fa-brands fa-instagram" style="color: #fff;" ></i>
+                        <i class="fa-brands fa-twitter" style="color: #fff;"></i>
+                        <i class="fa-brands fa-facebook" style="color: #fff;"></i>
+                    </div>
+                </div>
+            </div>
+            <p>@2024 D-Clothes.com</p>
+           </div>
+
+    <script src="collection.js" ></script>
+  </body>
+
+</html>

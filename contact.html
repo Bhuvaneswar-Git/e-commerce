@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>D-Clothes</title>
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"
+    />
+
+    <!-- css -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- font awesome icon -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"/>
+
+      <style>
+        .contact{
+            width: 100%;
+        }
+        .contact-container{
+            width: 70%;
+            height: 500px;
+            margin: 50px auto;
+            background-color: #1d232c;
+            padding: 20px;
+            border-radius: 10px;
+            border: none;
+            outline: none;
+            color: #fff;
+        }
+        .contact-container h1{
+            font-weight: 500;
+            padding-left: 30px;
+            padding-top: 10px;
+        }
+
+        .contact-container form{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 5px 25px;
+            width: 100%;
+        }
+        .contact-container input,label,textarea{
+            display: block;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        .contact-container form label {
+            font-size: 18px;
+        }
+        .contact-container form label::after {
+            content: " :";
+        }
+        .contact-container form input {
+            padding: 18px;
+            border-radius: 10px;
+            outline: none;
+            border: none;
+            margin-bottom: 15px;
+        }
+        .contact-container form textarea {
+            height: 100px;
+            padding: 5px;
+            border-radius: 10px;
+            outline: none;
+            border: none;
+            resize: none;
+        }
+        .contact-container form button{
+            color: #fff;
+            background-color: rgb(48, 48, 228);
+            padding: 10px 15px;
+            border-radius: 10px;
+            outline: none;
+            border: none;
+            margin-top: 5px;
+            cursor: pointer;
+            font-size: 15px;
+            font-weight: 200;
+        }
+
+      </style>
+
+
+  </head>
+
+  <body>
+
+    <!-- navbar -->
+     <nav class="navbar">
+        <h1>D-Clothes</h1>
+        <div class="navbar-links">
+            <p class="navbar-link" ><a href="index.html">Home</a></p>
+            <p class="navbar-link"><a href="collection.html">Collections</a></p>
+            <p class="navbar-link"><a href="contact.html">Contact</a></p>
+        </div>
+        <div class="navbar-menu-toggle" onclick="shownav()" >
+            <i class="fa-solid fa-bars" ></i>
+        </div>
+     </nav>
+
+     <!-- side navbar -->
+      <div class="side-navbar">
+        <p style="text-align: right;" ><i class="fa-solid fa-xmark" onclick="closenav()" ></i></p>
+        <div class="side-navbar-links"></div>
+            <p class="side-navbar-link" ><a href="index.html">Home</a></p>
+            <p class="side-navbar-link"><a href="collection.html">Collections</a></p>
+            <p class="side-navbar-link"><a href="contact.html">Contact</a></p>
+        </div>
+      </div>
+
+      <!-- contact box -->
+       <div class="contact">
+        <div class="contact-container">
+            <h1>Contact Us</h1>
+            <form>
+                <label for="name" >Name</label>
+                <input type="text" id="name">
+                <label for="email">Email</label>
+                <input type="email" id="email">
+                <label for="textarea">Message</label>
+                <textarea type="text" id="textarea"> </textarea>
+                <button class="Submit" onclick="get()">Submit</button>
+            </form>
+        </div>
+
+
+       </div>
+
+
+          <!-- footer -->
+           <div class="footer">
+            <div class="footer-container">
+                <div class="footer-box-1">
+                    <h2>D-Clothes</h2>
+                    <p>Curated style, delivered to your doorstep: Our brand’s e-commerce D-Clothes.</p>
+                    <div class="footer-icon-container">
+                        <i class="fa-brands fa-instagram" style="color: #fff;" ></i>
+                        <i class="fa-brands fa-twitter" style="color: #fff;"></i>
+                        <i class="fa-brands fa-facebook" style="color: #fff;"></i>
+                    </div>
+                </div>
+            </div>
+            <p>@2024 D-Clothes.com</p>
+           </div>
+
+    <script>
+
+        var sidenav = document.querySelector(".side-navbar")
+
+        function shownav()
+    {
+    sidenav.style.left="0"
+}
+
+function closenav()
+{
+    sidenav.style.left="-50%"
+}
+
+function get(){
+
+var a = document.getElementById("name").value;
+var b = document.getElementById("email").value;
+var c = document.getElementById("textarea").value;
+
+localStorage.setItem("name", a);
+localStorage.setItem("email", b);
+localStorage.setItem("message", c);
+
+
+}
+    </script>
+  </body>
+
+</html>
